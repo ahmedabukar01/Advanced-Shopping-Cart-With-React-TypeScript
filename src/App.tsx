@@ -1,10 +1,12 @@
+import {Route, Routes} from 'react-router-dom'
+import {Container} from 'react-bootstrap'
 
 function App() {
 
   return (
-    <div className="App">
+    <Container>
       <h1>HI from Vite React with TypeScript...</h1>
-    </div>
+    </Container>
   )
 }
 
