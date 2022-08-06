@@ -8,6 +8,6 @@ interface itemProps {
 }
  export default function({id, name, price, imgUrl}: itemProps){
     return <Card>
-        
+        <Card.Img variant="top" height="200px" src={imgUrl} style={{objectFit: "cover"}}/>
     </Card>
 }

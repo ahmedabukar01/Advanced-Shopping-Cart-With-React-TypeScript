@@ -4,7 +4,7 @@ import StoreItems from '../components/StoreItems'
 
 const Store = () => {
   return (
-    <Row>
+    <Row md={2} xs={1} lg={3} g={3}>
       {storeItems.map(item=>(
         <Col>
         <StoreItems {...item}/>
