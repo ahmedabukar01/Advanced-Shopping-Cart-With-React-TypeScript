@@ -6,7 +6,7 @@ const Store = () => {
   return (
     <Row md={2} xs={1} lg={3} g={3}>
       {storeItems.map(item=>(
-        <Col>
+        <Col key={item.id}>
         <StoreItems {...item}/>
         </Col>
       ))}
