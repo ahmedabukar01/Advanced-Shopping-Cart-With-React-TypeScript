@@ -8,7 +8,7 @@ interface itemProps {
     imgUrl: string
 }
  export default function({id, name, price, imgUrl}: itemProps){
-    let quantity = 0;
+    let quantity = 3;
     return <Card className="h-100">
         <Card.Img variant="top" height="200px" src={imgUrl} style={{objectFit: "cover"}}/>
         <Card.Body className="d=flex flex-column">
@@ -20,7 +20,15 @@ interface itemProps {
             {quantity === 0 ? (
                 <Button className="w-100">Add To Cart</Button>                                         
                 ) : (<div className="d-flex align-items-center flex-column" style={{gap: '.5rem'}}>
-                    <div className="d-flex align-items-center justify-content-center" style={{gap: '.5rem'}}></div>
+                    <div className="d-flex align-items-center justify-content-center" style={{gap: '.5rem'}}>
+                        <Button>-</Button>
+                        <div>
+                        <span className="fs-3">{quantity}</span>
+                        in cart
+                        </div>
+                        <Button>+</Button>
+                    </div>
+                    <Button variant="danger" size="sm">Remove</Button>
                 </div>)}
             </div> 
         </Card.Body>
