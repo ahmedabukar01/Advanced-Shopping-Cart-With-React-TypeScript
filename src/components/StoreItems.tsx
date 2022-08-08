@@ -18,9 +18,11 @@ interface itemProps {
             </Card.Title>
             <div className="mt-auto">
             {quantity === 0 ? (
-                <Button>Add To Cart</Button>
-                ) : (<Button>- +</Button>)}
-            </div>
+                <Button className="w-100">Add To Cart</Button>                                         
+                ) : (<div className="d-flex align-items-center flex-column" style={{gap: '.5rem'}}>
+                    <div className="d-flex align-items-center justify-content-center" style={{gap: '.5rem'}}></div>
+                </div>)}
+            </div> 
         </Card.Body>
     </Card>
-} 
+}  
