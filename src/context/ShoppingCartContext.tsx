@@ -1,4 +1,4 @@
-import {Children, createContext, ReactNode, useContext} from 'react'
+import { createContext, ReactNode, useContext} from 'react'
 
 interface shopCartProps{
     children: ReactNode
@@ -10,7 +10,7 @@ export function useShoppingCart(){
     return useContext(ShoppingCartContext)
 }
 
-export function shoppingCartProvider({children}: shopCartProps){
+export function ShoppingCartProvider({children}: shopCartProps){
     return (
         <ShoppingCartContext.Provider value={{}}>
             {children}
